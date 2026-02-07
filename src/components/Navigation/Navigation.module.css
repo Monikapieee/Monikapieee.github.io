@@ -1,0 +1,117 @@
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background-color: var(--color-overlay);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+    visibility 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.overlayVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Panel */
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 300;
+  width: var(--nav-panel-width);
+  height: 100%;
+  background-color: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 48px;
+}
+
+.panelOpen {
+  transform: translateX(0);
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeLine {
+  position: absolute;
+  width: 24px;
+  height: 1.5px;
+  background-color: var(--color-text-primary);
+}
+
+.closeLine:first-child {
+  transform: rotate(45deg);
+}
+
+.closeLine:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Menu list */
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Menu item — stagger reveal */
+.menuItem {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.menuItemVisible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Menu link */
+.menuLink {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 12px 0;
+  transition: color 0.3s ease;
+}
+
+.menuLink:hover,
+.menuLink:focus-visible {
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .panel {
+    padding: 80px 32px;
+  }
+
+  .closeButton {
+    top: 16px;
+    right: 20px;
+  }
+
+  .menuLink {
+    font-size: 1.1rem;
+  }
+}

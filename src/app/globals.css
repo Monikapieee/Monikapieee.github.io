@@ -1,0 +1,94 @@
+/* ========================================
+   CSS Custom Properties — Light Theme (default)
+   ======================================== */
+:root {
+  --color-bg: #faf8f5;
+  --color-overlay: rgba(250, 248, 245, 0.88);
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #6b6560;
+  --color-accent: #4a5f9e;
+  --color-border: rgba(26, 26, 26, 0.08);
+
+  --font-serif: var(--font-cormorant-garamond), "Georgia", serif;
+  --font-sans: var(--font-raleway), "Helvetica Neue", sans-serif;
+
+  --header-height: 96px;
+  --nav-panel-width: 420px;
+}
+
+/* ========================================
+   Dark Theme (system preference)
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0a0a0a;
+    --color-overlay: rgba(10, 10, 10, 0.88);
+    --color-text-primary: #f5f0eb;
+    --color-text-secondary: #b8b0a8;
+    --color-accent: #6b7fbf;
+    --color-border: rgba(245, 240, 235, 0.1);
+  }
+}
+
+/* ========================================
+   CSS Reset & Base Styles
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 72px;
+    --nav-panel-width: 100%;
+  }
+}
