@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Raleway } from "next/font/google";
 import { MenuProvider } from "@/components/MenuProvider";
 import { Header } from "@/components/Header/Header";
@@ -18,6 +18,12 @@ const raleway = Raleway({
   variable: "--font-raleway",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://magdaraczko.com"),
@@ -49,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="pl" className={`${cormorantGaramond.variable} ${raleway.variable}`}>
       <head>
+        <meta name="darkreader-lock" />
         <meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
       </head>
