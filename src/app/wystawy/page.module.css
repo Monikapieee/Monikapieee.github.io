@@ -20,6 +20,31 @@
   margin-top: 0;
 }
 
+.nav {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navLink {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--color-text-primary);
+}
+
+.section + .section {
+  margin-top: 5rem;
+}
+
 .exhibitionList {
   list-style: none;
   padding: 0;

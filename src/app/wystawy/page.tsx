@@ -15,7 +15,16 @@ export const metadata: Metadata = {
 export default function WystawyPage() {
   return (
     <article className={styles.article}>
-      <section>
+      <nav className={styles.nav}>
+        <a href="#indywidualne" className={styles.navLink}>
+          Wystawy indywidualne
+        </a>
+        <a href="#zbiorowe" className={styles.navLink}>
+          Wystawy zbiorowe
+        </a>
+      </nav>
+
+      <section id="indywidualne" className={styles.section}>
         <h2 className={styles.sectionHeading}>Wystawy indywidualne</h2>
         <ul className={styles.exhibitionList}>
           <li className={styles.exhibitionItem}>
@@ -155,7 +164,7 @@ export default function WystawyPage() {
         </ul>
       </section>
 
-      <section>
+      <section id="zbiorowe" className={styles.section}>
         <h2 className={styles.sectionHeading}>Wystawy zbiorowe</h2>
         <ul className={styles.exhibitionList}>
           <li className={styles.exhibitionItem}>
