@@ -1,0 +1,56 @@
+.article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 64px) 24px 96px;
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sectionHeading:first-child {
+  margin-top: 0;
+}
+
+.exhibitionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exhibitionItem {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 0.5em 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.exhibitionItem:last-child {
+  border-bottom: none;
+}
+
+.year {
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .article {
+    padding: calc(var(--header-height) + 32px) 16px 64px;
+  }
+
+  .sectionHeading {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
