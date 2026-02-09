@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Raleway } from "next/font/google";
 import { MenuProvider } from "@/components/MenuProvider";
 import { Header } from "@/components/Header/Header";
 import { Navigation } from "@/components/Navigation/Navigation";
+import { Footer } from "@/components/Footer/Footer";
 import "./globals.css";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -64,6 +65,7 @@ export default function RootLayout({
           <Header />
           <Navigation />
           <main>{children}</main>
+          <Footer />
         </MenuProvider>
       </body>
     </html>

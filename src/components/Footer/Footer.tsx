@@ -1,50 +1,16 @@
-import type { Metadata } from "next";
-import styles from "./page.module.css";
+import styles from "./Footer.module.css";
 
-export const metadata: Metadata = {
-  title: "Kontakt — Magda Raczko",
-  description:
-    "Kontakt z artystką Magdą Raczko — email, Instagram, Warszawa.",
-  openGraph: {
-    title: "Kontakt — Magda Raczko",
-    description:
-      "Kontakt z artystką Magdą Raczko — email, Instagram, Warszawa.",
-  },
-};
-
-export default function KontaktPage() {
+export function Footer() {
   return (
-    <article className={styles.article}>
-      <h1 className={styles.sectionHeading}>Kontakt</h1>
-
-      <div className={styles.contactList}>
-        <div className={styles.contactRow}>
+    <footer className={styles.footer}>
+      <div className={styles.columns}>
+        <div className={styles.column}>
           <svg
-            className={styles.contactIcon}
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
-          </svg>
-          <a
-            className={styles.contactLink}
-            href="mailto:raczko.magda@gmail.com"
-          >
-            raczko.magda@gmail.com
-          </a>
-        </div>
-
-        <div className={styles.contactRow}>
-          <svg
-            className={styles.contactIcon}
+            className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            width="24"
-            height="24"
+            width="18"
+            height="18"
             fill="currentColor"
             aria-hidden="true"
           >
@@ -55,7 +21,6 @@ export default function KontaktPage() {
             />
           </svg>
           <a
-            className={styles.contactLink}
             href="https://www.instagram.com/magdaraczko"
             target="_blank"
             rel="noopener noreferrer"
@@ -64,21 +29,36 @@ export default function KontaktPage() {
           </a>
         </div>
 
-        <div className={styles.contactRow}>
+        <div className={styles.column}>
           <svg
-            className={styles.contactIcon}
+            className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
-            height="24"
+            height="18"
             viewBox="0 -960 960 960"
-            width="24"
+            width="18"
             fill="currentColor"
             aria-hidden="true"
           >
-            <path d="M360-440h80v-110h80v110h80v-190l-120-80-120 80v190Zm120 254q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+            <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
           </svg>
-          <span className={styles.contactText}>Warszawa, Polska</span>
+          <a href="mailto:raczko.magda@gmail.com">raczko.magda@gmail.com</a>
+        </div>
+
+        <div className={styles.column}>
+          Projekt i realizacja:{" "}
+          <a
+            href="https://www.lukaszkaszuba.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Łukasz Kaszuba
+          </a>
         </div>
       </div>
-    </article>
+
+      <div className={styles.copyright}>
+        © 2026 Magda Raczko. Wszelkie prawa zastrzeżone.
+      </div>
+    </footer>
   );
 }
