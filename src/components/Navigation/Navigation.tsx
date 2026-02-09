@@ -10,9 +10,9 @@ const NAV_ITEMS = [
   { label: "Wystawy", href: "/wystawy" },
   { label: "Obrazy", href: "/obrazy" },
   { label: "Kontakt", href: "/kontakt" },
-  { label: "Rysunki", href: "/rysunki" },
-  { label: "Performance", href: "/performance" },
-  { label: "Poezja", href: "/poezja" },
+  // { label: "Rysunki", href: "/rysunki" },
+  // { label: "Performance", href: "/performance" },
+  // { label: "Poezja", href: "/poezja" },
 ] as const;
 
 export function Navigation() {
@@ -71,7 +71,9 @@ export function Navigation() {
             <li
               key={item.href}
               className={`${styles.menuItem} ${isOpen ? styles.menuItemVisible : ""}`}
-              style={{ transitionDelay: isOpen ? `${index * 40 + 200}ms` : "0ms" }}
+              style={{
+                transitionDelay: isOpen ? `${index * 40 + 200}ms` : "0ms",
+              }}
             >
               <Link
                 href={item.href}

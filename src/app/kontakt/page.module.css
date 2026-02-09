@@ -1,0 +1,71 @@
+.article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: calc(var(--header-height) + 64px) 24px 96px;
+}
+
+.sectionHeading {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contactList {
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.contactIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+
+.contactLink {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.contactLink:hover {
+  opacity: 0.7;
+}
+
+.contactText {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .article {
+    padding: calc(var(--header-height) + 32px) 16px 64px;
+  }
+
+  .sectionHeading {
+    font-size: 1.4rem;
+  }
+
+  .contactList {
+    padding-left: 0.5rem;
+  }
+}
